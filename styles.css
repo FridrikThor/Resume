@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-*
-{
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-body
-{
+html {
+  font-size: 16px;
+}
+body{
   background: lightblue;
   display: flex;
   justify-content: center;
@@ -17,101 +18,179 @@ body
 .container{
   position: relative;
   width: 100%;
-  max-width: 1000px;
-  min-height: 1000px;
+  /*max-width: 62.5rem;*/
+  /*width: 595px;*/
+  /*min-height: 6.25rem;*/
+  /*height: 841px;*/
+  max-width: 794px;
+  min-height: 1123px;
   background: #fff;
-  margin: 50px;
+  /*margin: 3rem;*/
   display: grid;
   grid-template-columns: 1fr 2fr;
-  box-shadow: 0 35px 55px rgba(0,0,0,0.1);
+  box-shadow: 0 2.1875rem 3.4375rem rgba(0,0,0,0.1);
 }
-.container .left_Side
-{
+.container .leftSide{
   position: relative;
-  background: #003147;
-  padding: 40px;
+  background: #16365A;
+  padding: 2rem;
 }
-.profileText
-{
+.imgBx{
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 20px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-.profileText .imgBx
-{
-  position: relative;
-  width: 200px;
-  height: 200px;
+  width: 10.5rem;
+  height: 10.5rem;
   border-radius: 50%;
   overflow: hidden;
-
+  margin: 0 auto;
 }
-.profileText .imgBx img
-{
+.imgBx img{
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-
 }
-.profileText h2
-{
+.degree {
   color: #fff;
-  font-size: 1.5em;
-  margin-top: 5px;
+  padding-top: 0.5rem;
+  width: max-content; /* Define a width */
+  margin: 0 auto; /* Auto margins will center the div */
+}
+.infoTitle{
+  padding-top: 0.6rem;
+}
+.title{
   text-transform: uppercase;
-  text-align: center;
+  letter-spacing: 0.0625rem;
+}
+.titleLeftSide{
   font-weight: 600;
-  line-height: 1.4em;
-}
-.profileText h2 span
-{
-  font-size: 0.6em;
-  font-weight: 300;
-}
-.contactInfo
-{
-  padding-top: 40px;
-}
-.title
-{
   color: #fff;
-  text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 1px;
-  margin-bottom: 20px;
+  border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.2);
 }
-.contactInfo ul
-{
+.titleRightSide{
+  color: #003147;
+  /*margin-bottom: 0.625rem;*/
+}
+.infoTitle ul{
   position: relative;
 }
-.contactInfo ul li
-{
+
+.infoTitle ul li{
   position: relative;
   list-style: none;
-  margin: 10px 0;
+  margin: 0.625rem 0;
+}
+.infoTitle ul.withBullets {
+  position: relative;
+  list-style-type: disc; /* Adds bullet points to this specific list */
+  padding-left: 2rem; /* Indentation for the bullets */
+}
+.infoTitle ul.withBullets li {
+  position: relative;
+  list-style-type: disc; /* Ensure bullets are displayed */
+  margin: 0.125rem 0;
   cursor: pointer;
 }
-.contactInfo ul li .icon
-{
-  display: inline-block;
-  width: 30px;
-  font-size: 18px;
-  color: #03a9f4;
-} 
-.contactInfo ul li span
-{
+.infoTitle ul.withBullets li::marker {
+  color: #fff; /* Change bullet color to white */
+}
+
+.infoTitle ul li span{
   color: #fff;
   font-weight: 300;
 }
-.container .right_Side
-{
+.infoTitle ul li .text{
+  color: #fff;
+  font-weight: 300;
+  font-size: 0.875rem;
+}
+.infoTitle.languages .percent{
+  position: relative;
+  width: 100%;
+  height: 0.375rem;
+  background: #081921;
+  display: block;
+  margin-top: 0.3125rem;
+}
+.infoTitle.languages .percent div{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #03a9f4;
+}
+.infoTitle.skills .percent{
+  position: relative;
+  width: 100%;
+  height: 0.375rem;
+  background: #081921;
+  display: block;
+  margin-top: 0.3125rem;
+}
+.infoTitle.skills .percent div{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #03a9f4;
+}
+
+.infoLabel {
+  color: #fff;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.container .right_Side{
   position: relative;
   background: #fff;
-  padding: 40px;
+  padding: 2rem;
+}
+.fullNameTitle{
+  color: #003147;
+  text-transform: uppercase;
+  letter-spacing: 0.0625rem;
+  margin-bottom: 0.625rem;
+}
+.about{
+  margin-bottom: 1rem;
+}
+.about:last-child{
+  margin-bottom: 0;
+}
+.title2{
+  color: #003147;
+  text-transform: uppercase;
+  letter-spacing: 0.0625rem;
+  margin-bottom: 0.625rem;
+}
+p{
+  color: #333; 
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+.bold{
+  font-weight: 800;
+}
+
+.about .box{
+  display: flex;
+  flex-direction: row;
+  margin-top: 0.75rem; 
+}
+.about .box .yearEducation{
+  min-width: 4.5rem;
+  max-width: 4.5rem;
+  padding-top: 0.25rem;
+}
+.about .box .yearEducation h6{
+  text-transform: uppercase;
+  color: #848c90;
+  font-weight: 600;
+}
+.about .box .text h4{
+  text-transform: uppercase;
+  color: #2a7da2;
 }
